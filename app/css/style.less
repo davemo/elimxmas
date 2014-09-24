@@ -1,0 +1,375 @@
+// colors
+@red: #ae1202;
+@yellow: #d4c41b;
+@green: #1caf0f;
+@darkGreen: #002d0f;
+
+@lightRed:#d01046;
+@mediumRed: #7e0a24;
+@deepRed: #3b0411;
+
+html {
+  height: 100%;
+}
+
+p.body {
+  line-height: 1.35em;
+  margin-bottom: 20px;
+}
+
+p.scripty {
+  font-size: 3em;
+  font-family: ScriptinaPro, serif;
+}
+
+em {
+  color: gold;
+}
+
+.nav a {
+  border-bottom: none;
+}
+
+a {
+  border-bottom: 1px solid gold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#map {
+  height: 450px;
+}
+
+.navbar .brand {
+  display: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+@rightRotate: 7.5deg;
+@leftRotate: -7.5deg;
+
+.tilt (@rotation) {
+  -webkit-transform: rotate(@rotation);
+     -moz-transform: rotate(@rotation);
+      -ms-transform: rotate(@rotation);
+       -o-transform: rotate(@rotation);
+          transform: rotate(@rotation);
+
+  -webkit-box-shadow: 4px 4px 0px 0px black;
+          box-shadow: 4px 4px 0px 0px black;
+}
+
+.image-feature {
+  text-align: center;
+  &.alt img {
+    .tilt(@leftRotate);
+  }
+  img {
+    .tilt(@rightRotate);
+    width: 225px;
+  }
+}
+
+.showtime {
+  font-size: 1.5em;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.celebration {
+  text-align: right;
+}
+
+.gold {
+  color: gold;
+}
+
+.featuring p.ornate {
+  font-size: 4.25em;
+}
+
+.holly {
+  opacity: 0.5;
+}
+
+.windows {
+  .logo {
+    margin-top: 0px;
+    .main { margin-bottom: -5px; }
+  }
+
+}
+
+.logo {
+  margin-top: 38px;
+  .main {
+    font-family: ScriptinaPro, serif;
+    font-size: 100px;
+    margin-bottom: -25px;
+  }
+  .sub {
+    font-family: 'Arial', sans-serif;
+    margin-left: 38px;
+    font-size: 30px;
+  }
+}
+
+h1 {
+  font-family: 'Cantora One', sans-serif;
+  font-size: 3em;
+}
+
+p {
+  color: white;
+  text-shadow: 1px 1px 3px #888;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7em;
+  line-height: 0.85em;
+  &.ornate {
+    font-family: 'Neuton', serif;
+    font-size: 3em;
+  }
+}
+
+.fb-like {
+  margin-bottom: 10px;
+}
+
+.footer {
+  p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+  }
+
+  hr {
+    margin-bottom: 10px;
+  }
+}
+
+.lists p {
+  font-size: 2.55em;
+}
+
+.leaflet-container a {
+  border-bottom: none;
+}
+
+hr {
+  border-bottom: none;
+  opacity: 0.3;
+}
+
+body {
+  background-color: @deepRed;
+  background-image: url(../img/xmasbg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.brand.author { float: right; }
+
+.featured-artist {
+  -webkit-transform: rotate(7.5deg);
+     -moz-transform: rotate(7.5deg);
+      -ms-transform: rotate(7.5deg);
+       -o-transform: rotate(7.5deg);
+          transform: rotate(7.5deg);
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+@media only screen and (min-width: 974px) {
+  #page {
+    margin-top: 15px;
+  }
+
+  body {
+    padding-top: 20px;
+  }
+
+  .celebration {
+    font-size: 2.21em;
+  }
+
+  .lists p {
+    line-height: 1.25em;
+  }
+
+  p.body.dropcap:first-child::first-letter {
+    float: left;
+    font-size: 400%;
+    margin: 7px;
+    color: gold;
+    display: block;
+    height: 52px;
+    padding: 11px;
+    width: 83px;
+    padding-left: 10px;
+    margin-bottom: -18px;
+    padding-bottom: 14px;
+    background: url(../img/other.drop.cap.bg.png) no-repeat;
+    background-position: 1px 8px;
+    text-align: right;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 2px;
+  }
+
+  #page {
+    margin-top: 15px;
+  }
+
+  .celebration {
+    font-size: 2.21em;
+  }
+
+  .navbar .brand {
+    display: block;
+  }
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 768px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 20px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  p.body {
+    text-align: left;
+  }
+
+  .image-feature {
+    text-align: center;
+    &.alt img {
+      .tilt(0deg);
+    }
+    img {
+      .tilt(0deg);
+    }
+  }
+
+  .navbar .brand {
+    display: block;
+  }
+
+  .logo {
+    .main {
+      margin-left: -60px;
+    }
+    .sub {
+      margin-left: 0px;
+    }
+  }
+
+  .featuring p.ornate {
+    font-size: 2em;
+  }
+
+  .swirly {
+    width: 50px;
+  }
+
+  .lists p {
+    line-height: 1.25em;
+  }
+
+  p.scripty {
+    line-height: 2em;
+  }
+
+  .showtimes div {
+    margin-bottom: 15px;
+  }
+
+  .fancy-footer {
+    display: none;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  .navbar .nav.nav-collapse li {
+    display: block;
+    float: none;
+    a {
+      width: 100%;
+    }
+  }
+
+  body {
+    padding-top: 20px;
+  }
+
+  p, .lists p {
+    font-size: 1.25em;
+    text-align: center;
+  }
+
+  .image-feature {
+    text-align: center;
+    &.alt img {
+      .tilt(0deg);
+    }
+    img {
+      .tilt(0deg);
+    }
+  }
+
+  .logo {
+    .main {
+      margin-left: -60px;
+    }
+    .sub {
+      margin-left: 0px;
+    }
+  }
+
+  p.body {
+    font-size: 1.25em;
+    text-align: left;
+  }
+
+  p.scripty {
+    line-height: 2em;
+  }
+
+  .lists p {
+    line-height: 1.25em;
+  }
+
+  .showtimes div {
+    margin-bottom: 15px;
+  }
+
+  .fancy-footer {
+    display: none;
+  }
+}

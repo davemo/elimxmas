@@ -1,0 +1,17 @@
+{
+  "name": "elim-church",
+  "description": "Christmas 2014",
+  "version": "0.2.9-24-2014",
+  "private": true,
+  "author": "David Mosher",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-imagemin": "^0.8.1",
+    "lineman": "^0.34.2",
+    "lineman-less": "^0.1.0"
+  },
+  "scripts": {
+    "start": "lineman run",
+    "test": "lineman spec-ci"
+  }
+}
