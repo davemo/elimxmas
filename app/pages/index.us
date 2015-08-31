@@ -5,11 +5,8 @@
 
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Neuton:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
-    <!--[if lte IE 8]>
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" />
-    <![endif]-->
-    <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>

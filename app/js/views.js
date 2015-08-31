@@ -74,8 +74,11 @@
     nav: "#map",
     components: function() {
       var map = L.map('map').setView([52.098831,-106.563257], 14);
-      L.tileLayer('http://{s}.tile.cloudmade.com/e23d1defb9d94c8ba4c21d606df635bd/997/256/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+        maxZoom: 18,
+        accessToken: 'pk.eyJ1IjoiZG1vc2hlciIsImEiOiJlZDUwNWU4NGYxM2ExYjNmOWNmZWYwOGVmMTY2NWVlZCJ9.Dv84yZmgUXUabY-_NIW14A',
+        id: 'dmosher.nal9mapd'
       }).addTo(map);
       L.marker([52.098831,-106.563257]).addTo(map)
         .bindPopup('Elim Church. <br>419 Slimmon Road, Saskatoon, SK').openPopup();
